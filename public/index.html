@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GMockup · Estudio de polos</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/build/three.module.js","three/addons/":"/vendor/examples/jsm/"}}</script>
+</head>
+<body>
+  <header><a class="brand" href="/">g<span>mockup</span><i>®</i></a><span class="project">ESTUDIO DE ESTAMPADOS</span><button id="export" disabled>Guardar imagen ↗</button></header>
+  <main>
+    <aside>
+      <div class="eyebrow">TU PRÓXIMA CREACIÓN</div><h1>Hazlo tuyo.</h1><p class="intro">Un polo en blanco.<br>Infinitas posibilidades.</p>
+      <section><h2><b>01</b> Color del polo</h2><div id="swatches" class="swatches"></div><label class="custom">Color personalizado <input id="color" type="color" value="#ffffff"></label><output id="hex">#FFFFFF</output></section>
+      <section><h2><b>02</b> Tu estampado</h2><label class="upload" id="dropzone"><span class="plus">＋</span><strong>Carga tu diseño</strong><small>PNG con transparencia · hasta 20 MB</small><input id="upload" type="file" accept="image/png" disabled></label><div id="design-info" hidden><img id="thumb" alt="Estampado cargado"><span id="filename"></span><button id="remove" aria-label="Quitar estampado">×</button></div><p class="hint">Tu imagen se procesa en tu navegador.</p>
+      <fieldset id="design-controls" disabled><label>Ubicación<select id="side"><option value="front">Pecho</option><option value="back">Espalda</option></select></label><label>Ancho <output id="size-value">30%</output><input id="size" type="range" min="8" max="58" value="30"></label><label>Horizontal<input id="pos-x" type="range" min="-28" max="28" value="0"></label><label>Vertical<input id="pos-y" type="range" min="-35" max="30" value="9"></label><label>Giro <output id="angle-value">0°</output><input id="angle" type="range" min="-180" max="180" value="0"></label></fieldset></section>
+      <div class="aside-footer"><span class="dot"></span> Vista previa en tiempo real</div>
+    </aside>
+    <div id="stage"><div class="stage-top"><span>POLO ESENCIAL / 01</span><span class="tag">VISTA 3D</span></div><div id="viewport"></div><div id="status" role="status">Preparando tu polo…</div><div class="view-controls"><button data-view="front" class="active">Frente</button><button data-view="back">Espalda</button><button data-view="left">Lado</button><button data-view="top">Arriba</button><button id="reset" title="Restablecer vista">↺</button></div><div class="stage-bottom"><span>Arrastra para girar · Rueda para acercar</span><span>HECHO PARA IMAGINAR.</span></div></div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body></html>

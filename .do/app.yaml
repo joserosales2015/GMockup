@@ -1,0 +1,13 @@
+name: gmockup
+services:
+  - name: web
+    github:
+      repo: joserosales2015/GMockup
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    dockerfile_path: Dockerfile
+    http_port: 8080
+    instance_count: 1
+    health_check:
+      http_path: /healthz
